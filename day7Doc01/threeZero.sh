@@ -6,6 +6,8 @@ echo sum of 3 integers adds to 0;
 
 for((n=0; n<10 ;n++))
 	do
+	#read -p "enter number: " num;
+
 	r=$(($RANDOM%10-5));
 	array[$n]=$r
 	done
@@ -28,7 +30,7 @@ for((i=0; i<8 ;i++))
 			#echo $ans
 			if [ $ans -eq 0 -a $i -ne $j -a $j -ne $k ]
 				then
-				echo $n1 $n2 $n3
+				echo zero = $n1 $n2 $n3
 				#echo i $i j $j k $k
 			fi
 
