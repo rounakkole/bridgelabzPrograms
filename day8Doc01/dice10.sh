@@ -2,9 +2,11 @@
 
 echo dice 10 times;
 
+declare -A dict
+
 random=1;
 dice[1]=0
-
+j=0
 
 while [ ${dice[random]} -lt 10 ]
 
@@ -12,7 +14,8 @@ while [ ${dice[random]} -lt 10 ]
 
 	random=$(($RANDOM%6+1));
 	dice[$random]=$((${dice[random]}+1))
-
+	dict[$j]=$random
+	j=$(($j+1))
 done
 
 min=11;
@@ -39,7 +42,8 @@ max=0;
 	done
 
 
-echo dice: ${dice[@]};
+#echo dice: ${dice[@]};
+echo dice: ${dict[@]};
 
 echo number $index1 max $max 
 echo number $index2 min $min
