@@ -1,7 +1,7 @@
 ##!/bin/bash -x
 
 echo birthday on same month;
-
+declare -A jan feb mar apr may jun jul aug sep oct nov dec
 
 for((i=1; i<51 ;i++))
    do
